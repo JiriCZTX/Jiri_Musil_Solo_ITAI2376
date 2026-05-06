@@ -1,0 +1,285 @@
+{
+  "status": "eval_dev_v1_adjudicated_manifest_canonical_promoted_via_phase_e_20260505T012411Z",
+  "artifact_candidate_status": "canonical_promoted",
+  "canonical_status": "canonical_promoted",
+  "phase_e_promotion_authorized_by_human_at_utc": "2026-05-05T01:32:10Z",
+  "phase_e_promotion_executed_at_utc": "2026-05-05T01:32:10Z",
+  "phase_e_run_dir": "redacted_pipeline_artifact_path_see_eval_methodology_doc",
+  "phase_e_source_phase_d_artifact": "redacted_pipeline_artifact_path_see_eval_methodology_doc",
+  "phase_e_source_phase_d_dir_locked_read_only": true,
+  "phase_e_required_addendum_artifact": "redacted_pipeline_artifact_path_see_eval_methodology_doc",
+  "phase_e_required_preflight_artifact": "redacted_pipeline_artifact_path_see_eval_methodology_doc",
+  "blind_protocol_incident_record_audit_history_only": "redacted_pipeline_artifact_path_see_eval_methodology_doc",
+  "breach_phase_d_run_audit_history_only_NOT_SOURCE": "redacted_pipeline_artifact_path_see_eval_methodology_doc",
+  "annotation_guide_hash": "annotation_guide_v7_2026-04-25",
+  "policy_registry_v2_hash_or_version": "v2 / sha256=9543c1060d4961a49b462f1e40056e59ff462941f80745ee5c8ae279e773aed8",
+  "policy_registry_v2_path": "redacted_pipeline_artifact_path_see_eval_methodology_doc",
+  "schema_version": "v7",
+  "label_schema": [
+    "CERT",
+    "DEGREE",
+    "EMPLOYER",
+    "INDUSTRY",
+    "LOCATION",
+    "PROJECT",
+    "SKILL",
+    "SOFT_SKILL",
+    "TOOL",
+    "YEARS_EXP"
+  ],
+  "coordinate_space_invariant": "masked_text",
+  "n_records": 840,
+  "expected_n_records": 840,
+  "computed_equals_expected": true,
+  "n_docs_covered": 25,
+  "expected_n_docs": 25,
+  "by_doc_counts": {
+    "snehaanbhawal_10005171": 18,
+    "snehaanbhawal_10333051": 19,
+    "snehaanbhawal_12122372": 18,
+    "snehaanbhawal_13454871": 42,
+    "snehaanbhawal_14554542": 57,
+    "snehaanbhawal_14663897": 10,
+    "snehaanbhawal_14861855": 23,
+    "snehaanbhawal_17864043": 26,
+    "snehaanbhawal_18067556": 83,
+    "snehaanbhawal_18278509": 26,
+    "snehaanbhawal_20882041": 20,
+    "snehaanbhawal_22946204": 54,
+    "snehaanbhawal_24322804": 24,
+    "snehaanbhawal_24833063": 55,
+    "snehaanbhawal_27914096": 28,
+    "snehaanbhawal_28831378": 22,
+    "snehaanbhawal_30741799": 23,
+    "snehaanbhawal_31605080": 21,
+    "snehaanbhawal_33527446": 43,
+    "snehaanbhawal_37335325": 45,
+    "snehaanbhawal_38753827": 71,
+    "snehaanbhawal_62994611": 40,
+    "snehaanbhawal_67582956": 33,
+    "snehaanbhawal_71576860": 21,
+    "snehaanbhawal_73497035": 18
+  },
+  "by_label_counts": {
+    "CERT": 17,
+    "DEGREE": 42,
+    "EMPLOYER": 21,
+    "INDUSTRY": 42,
+    "LOCATION": 56,
+    "PROJECT": 22,
+    "SKILL": 311,
+    "SOFT_SKILL": 1,
+    "TOOL": 277,
+    "YEARS_EXP": 51
+  },
+  "override_breakdown": {
+    "phase_a_repair_overlay_drop_inner_outer_survivor": 2,
+    "phase_a_repair_overlay_expand": 22,
+    "phase_a_repair_overlay_expand_and_drop_conflict": 1,
+    "phase_c2_keep_current_canonical_promotion_blocker_cleared": 1,
+    "phase_c_tool_skill_relabel_applied_in_phase_c": 5
+  },
+  "expected_override_breakdown": {
+    "phase_a_repair_overlay_expand": 22,
+    "phase_a_repair_overlay_expand_and_drop_conflict": 1,
+    "phase_a_repair_overlay_drop_inner_outer_survivor": 2,
+    "phase_c_tool_skill_relabel_applied_in_phase_c": 5,
+    "phase_c2_keep_current_canonical_promotion_blocker_cleared": 1
+  },
+  "n_records_with_human_override_record": 31,
+  "expected_n_records_with_human_override_record": 31,
+  "n_records_with_null_human_override_record": 809,
+  "expected_n_records_with_null_human_override_record": 809,
+  "phase_a_carryforward": {
+    "n_dropped_total": 26,
+    "breakdown": {
+      "n_degree_boundary_replaced": 23,
+      "n_paired_inner_skill_dropped_for_degree_overlap_resolution": 1,
+      "n_ovl_nest_inner_dropped": 2
+    },
+    "source_artifact": "redacted_pipeline_artifact_path_see_eval_methodology_doc",
+    "source_field_path_in_phase_a": "summary_counts.n_total"
+  },
+  "masked_text_hash_per_doc": {
+    "snehaanbhawal_33527446": {
+      "expected": "78fd9a3dc27f031486d9a9451d625d769075dd30521a37321d6b7c6d2c48733e",
+      "recompute": "78fd9a3dc27f031486d9a9451d625d769075dd30521a37321d6b7c6d2c48733e",
+      "match": true
+    },
+    "snehaanbhawal_30741799": {
+      "expected": "6177c779964cf82151795c93f0558996c987109bcc7583581779fabac91a3175",
+      "recompute": "6177c779964cf82151795c93f0558996c987109bcc7583581779fabac91a3175",
+      "match": true
+    },
+    "snehaanbhawal_62994611": {
+      "expected": "e2541f515265f48b20410584f8e33955364e78f8b07476b67d1f44498f7140a9",
+      "recompute": "e2541f515265f48b20410584f8e33955364e78f8b07476b67d1f44498f7140a9",
+      "match": true
+    },
+    "snehaanbhawal_12122372": {
+      "expected": "60e13ca212c937b860961f5264d9aba91a1797f091c46c388b2f9c7434145f15",
+      "recompute": "60e13ca212c937b860961f5264d9aba91a1797f091c46c388b2f9c7434145f15",
+      "match": true
+    },
+    "snehaanbhawal_73497035": {
+      "expected": "c8f16d5c799dba5e2d18d1c82f24aa240adba17a03e62b41a4bfa1c0d3b05bc0",
+      "recompute": "c8f16d5c799dba5e2d18d1c82f24aa240adba17a03e62b41a4bfa1c0d3b05bc0",
+      "match": true
+    },
+    "snehaanbhawal_22946204": {
+      "expected": "40da355d3af616d89ea3fc3f2475cc132b7a5b9b8563c91faaf6dc2839d61467",
+      "recompute": "40da355d3af616d89ea3fc3f2475cc132b7a5b9b8563c91faaf6dc2839d61467",
+      "match": true
+    },
+    "snehaanbhawal_31605080": {
+      "expected": "3e85e440a874c6ec4fdd06516d48128d50bfdf6956e58df2205f78bc011a0dfc",
+      "recompute": "3e85e440a874c6ec4fdd06516d48128d50bfdf6956e58df2205f78bc011a0dfc",
+      "match": true
+    },
+    "snehaanbhawal_18278509": {
+      "expected": "f1dc73c15de7f6dc180a9e1c4078c4e2c0237710101ffc87acca3b4844bb71c3",
+      "recompute": "f1dc73c15de7f6dc180a9e1c4078c4e2c0237710101ffc87acca3b4844bb71c3",
+      "match": true
+    },
+    "snehaanbhawal_14861855": {
+      "expected": "60d72583439fd481b4f0da0d005c6ada8213b01a326fbc7d7e285c2d753505b8",
+      "recompute": "60d72583439fd481b4f0da0d005c6ada8213b01a326fbc7d7e285c2d753505b8",
+      "match": true
+    },
+    "snehaanbhawal_14663897": {
+      "expected": "8ec3178041802cca2153782596e6691faab8647bda83adbce371063f0c5bac3d",
+      "recompute": "8ec3178041802cca2153782596e6691faab8647bda83adbce371063f0c5bac3d",
+      "match": true
+    },
+    "snehaanbhawal_71576860": {
+      "expected": "61243bf922a1394f93f549f6d92eba71de6530d9486e27f511445da580bea3d8",
+      "recompute": "61243bf922a1394f93f549f6d92eba71de6530d9486e27f511445da580bea3d8",
+      "match": true
+    },
+    "snehaanbhawal_13454871": {
+      "expected": "38dbbb6ff878689499ba8b1a353db0cfa8152a196f913cf202fafc0613e1c4cd",
+      "recompute": "38dbbb6ff878689499ba8b1a353db0cfa8152a196f913cf202fafc0613e1c4cd",
+      "match": true
+    },
+    "snehaanbhawal_67582956": {
+      "expected": "9faf1a41612ebfe26af60a98c17dfd5a7c01313f59e36827d01141891bff7a62",
+      "recompute": "9faf1a41612ebfe26af60a98c17dfd5a7c01313f59e36827d01141891bff7a62",
+      "match": true
+    },
+    "snehaanbhawal_10005171": {
+      "expected": "97ab2355fd76f5e47f2adcda2ff52b3822eab99f0b9685be2a43ba1f1e44993e",
+      "recompute": "97ab2355fd76f5e47f2adcda2ff52b3822eab99f0b9685be2a43ba1f1e44993e",
+      "match": true
+    },
+    "snehaanbhawal_24322804": {
+      "expected": "f6d02ce44748c9be5c2de03db1c0dded8a7717d175906e043a4818bb00f33221",
+      "recompute": "f6d02ce44748c9be5c2de03db1c0dded8a7717d175906e043a4818bb00f33221",
+      "match": true
+    },
+    "snehaanbhawal_14554542": {
+      "expected": "fe262b960439b6535c2d1aa3a7763295e43c482f80be91cbbaf22f71547d41dd",
+      "recompute": "fe262b960439b6535c2d1aa3a7763295e43c482f80be91cbbaf22f71547d41dd",
+      "match": true
+    },
+    "snehaanbhawal_37335325": {
+      "expected": "531aff2a65051e44449937a3f44c738551cdfc447cffd01cdddf6454ab199a45",
+      "recompute": "531aff2a65051e44449937a3f44c738551cdfc447cffd01cdddf6454ab199a45",
+      "match": true
+    },
+    "snehaanbhawal_28831378": {
+      "expected": "b9b7ce71117b54a66f57386dd3858f41b7b18341829da1607351ad496bdba28a",
+      "recompute": "b9b7ce71117b54a66f57386dd3858f41b7b18341829da1607351ad496bdba28a",
+      "match": true
+    },
+    "snehaanbhawal_20882041": {
+      "expected": "a8d4a7d87a6a0ee00e64aaadda64b82c4a8898a62d2df529b97446264ba48d28",
+      "recompute": "a8d4a7d87a6a0ee00e64aaadda64b82c4a8898a62d2df529b97446264ba48d28",
+      "match": true
+    },
+    "snehaanbhawal_27914096": {
+      "expected": "f957a2773c8344db16a1408a9bdf072f39bfa5832bd1d325d4f02a334ef7d4d9",
+      "recompute": "f957a2773c8344db16a1408a9bdf072f39bfa5832bd1d325d4f02a334ef7d4d9",
+      "match": true
+    },
+    "snehaanbhawal_24833063": {
+      "expected": "b4e32a1381dfce6638ff30900b35048afed64cdd89dabda514bdda775b47ed30",
+      "recompute": "b4e32a1381dfce6638ff30900b35048afed64cdd89dabda514bdda775b47ed30",
+      "match": true
+    },
+    "snehaanbhawal_10333051": {
+      "expected": "8bb5705f50a6b2e96b239ccfe5f02b35b855acb5dacc3ebd6716dc7892687d83",
+      "recompute": "8bb5705f50a6b2e96b239ccfe5f02b35b855acb5dacc3ebd6716dc7892687d83",
+      "match": true
+    },
+    "snehaanbhawal_17864043": {
+      "expected": "f5024e52341584356ef98aeaf3272376fbba8059f621e45da831b0d24ff8f81c",
+      "recompute": "f5024e52341584356ef98aeaf3272376fbba8059f621e45da831b0d24ff8f81c",
+      "match": true
+    },
+    "snehaanbhawal_38753827": {
+      "expected": "aa5f5d35189714ced41baf9d6188775c355a9ec98beb377117f97cc561fc84e1",
+      "recompute": "aa5f5d35189714ced41baf9d6188775c355a9ec98beb377117f97cc561fc84e1",
+      "match": true
+    },
+    "snehaanbhawal_18067556": {
+      "expected": "9e5112c2a1231f32ffcd392816ea08d392d455f8a979e6d38eb2b0fafbf40961",
+      "recompute": "9e5112c2a1231f32ffcd392816ea08d392d455f8a979e6d38eb2b0fafbf40961",
+      "match": true
+    }
+  },
+  "masked_text_hash_match_count": 25,
+  "masked_text_hash_mismatch_count": 0,
+  "eval_dev_v1_integrity_check": {
+    "expected_sha256": "0b5a643f32e504024aae0d8323709e08dcdbf03a76eee4a04222643d362a791f",
+    "expected_size_bytes": 456470,
+    "computed_pre": "0b5a643f32e504024aae0d8323709e08dcdbf03a76eee4a04222643d362a791f",
+    "size_bytes_pre": 456470,
+    "matches_expected_pre": true,
+    "matches_expected_size_pre": true,
+    "note": "post-write integrity confirmed in Phase E run dir validation report"
+  },
+  "eval_blind_v1_non_access_attestation": {
+    "phrase": "eval_blind_v1.json was not accessed in this Phase E canonical promotion.",
+    "phase_e_did_not_open_eval_blind_v1": true,
+    "phase_e_did_not_read_eval_blind_v1": true,
+    "phase_e_did_not_stat_eval_blind_v1": true,
+    "phase_e_did_not_hash_eval_blind_v1": true,
+    "phase_e_did_not_call_path_exists_on_eval_blind_v1": true,
+    "phase_e_did_not_glob_for_eval_blind_v1": true,
+    "phase_e_did_not_attempt_mtime_size_hash_existence_or_stat_verification_of_eval_blind_v1": true
+  },
+  "no_training_attestation": "no training was performed in Phase E",
+  "no_router_or_model_or_v11_or_gliner_change_attestation": "no router/model/v11/GLiNER changes were made in Phase E",
+  "sidecar_files_written": [
+    {
+      "path": "data/processed/eval_dev_v1_adjudicated.labels.json",
+      "sha256": "20e83d71c7f89e270b7e5223deae3974b4d18a2db1979f54c3ede7451999feed",
+      "size_bytes": 2859830
+    },
+    {
+      "path": "data/processed/eval_dev_v1_adjudication_provenance.jsonl",
+      "sha256": "993b67476cebab214679fd5d2ed55eed8a67433ee6b06961cb4f3f49634a7303",
+      "size_bytes": 2133950
+    },
+    {
+      "path": "data/processed/eval_dev_v1_adjudicated.manifest.json",
+      "sha256": "computed_post_manifest_write_in_phase_e_validation_report",
+      "size_bytes": "computed_post_manifest_write_in_phase_e_validation_report"
+    }
+  ],
+  "validation_checks": {
+    "retained_span_count_equals_expected_840": true,
+    "docs_25_of_25": true,
+    "offset_round_trip_all_pass": true,
+    "label_schema_all_pass": true,
+    "coordinate_space_masked_text_all_pass": true,
+    "override_breakdown_match": true,
+    "masked_text_hash_match_25_of_25": true,
+    "phase_a_carryforward_count_match_expected_26": true,
+    "policy_registry_v2_sha256_match": true,
+    "eval_dev_v1_pre_eq_expected_sha256": true,
+    "note": "duplicate / overlap / forbidden-key checks executed in Phase E run dir validation report"
+  },
+  "redaction_note": "Pipeline run directory paths in this manifest have been replaced with the marker 'redacted_pipeline_artifact_path_see_eval_methodology_doc'. The full audit chain and per stage validation reports are documented in docs/EVAL_METHODOLOGY.md. The integrity check fields below (eval_dev_v1_integrity_check, masked_text_hash_per_doc, sidecar sha256s, override_breakdown) are unaffected by this redaction and still verify the canonical sidecars cryptographically against the dev set.",
+  "sanitization_pass_applied": "A sanitization pass replaced annotation engine identifiers with neutral methodology terms (primary_annotator, secondary_annotator, cross_check_layer) so this manifest reads as engineering documentation rather than an internal session log. The integrity check fields above (eval_dev_v1 sha256, masked_text_hash_per_doc) are computed on the underlying source data and remain unchanged. The sidecar sha256s above reflect the sanitized files."
+}

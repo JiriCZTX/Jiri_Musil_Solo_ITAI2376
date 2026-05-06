@@ -1,0 +1,306 @@
+employee_id,department,role,age,tenure_years,salary,comp_ratio,satisfaction,performance,engagement
+1,InvestmentBanking,Analyst,52,11.7,263713.0,1.34,1.94,2.29,3.88
+2,InvestmentBanking,Director,53,0.5,171994.0,0.89,4.12,3.25,4.48
+3,InvestmentBanking,Vice President,39,0.8,196089.0,0.92,4.2,3.17,3.69
+4,InvestmentBanking,Director,36,9.2,233145.0,1.12,3.22,3.57,4.02
+5,InvestmentBanking,Vice President,28,3.4,243638.0,1.18,3.09,2.63,4.17
+6,InvestmentBanking,Director,29,1.7,178998.0,0.84,4.02,3.72,4.13
+7,InvestmentBanking,Director,55,6.8,224742.0,1.12,4.2,3.36,4.21
+8,InvestmentBanking,Managing Director,22,0.8,201323.0,0.92,3.24,2.87,3.42
+9,InvestmentBanking,Analyst,27,0.6,172579.0,0.9,2.15,2.97,3.9
+10,InvestmentBanking,Vice President,44,5.2,228634.0,1.11,3.13,3.8,3.69
+11,InvestmentBanking,Managing Director,56,1.7,177205.0,0.9,3.61,3.68,3.54
+12,InvestmentBanking,Vice President,53,6.6,215740.0,1.08,2.97,2.95,3.57
+13,InvestmentBanking,Director,50,2.2,188765.0,0.93,3.88,3.51,4.2
+14,InvestmentBanking,Analyst,37,1.0,189092.0,0.84,2.34,2.27,3.2
+15,InvestmentBanking,Associate,58,15.4,263541.0,1.36,3.21,3.72,3.24
+16,InvestmentBanking,Director,32,1.1,184807.0,0.95,2.12,3.5,3.94
+17,InvestmentBanking,Vice President,29,3.4,205329.0,0.98,3.69,3.22,4.76
+18,InvestmentBanking,Analyst,47,0.6,191751.0,0.95,4.59,3.78,4.01
+19,InvestmentBanking,Director,26,13.6,248903.0,1.18,3.19,2.24,4.18
+20,InvestmentBanking,Associate,22,27.2,316938.0,1.57,4.17,4.6,5.0
+21,InvestmentBanking,Vice President,59,2.3,158407.0,0.79,2.85,2.91,3.43
+22,InvestmentBanking,Associate,22,7.9,231959.0,1.13,2.67,2.03,3.51
+23,InvestmentBanking,Analyst,33,3.3,236262.0,1.17,4.29,2.85,3.09
+24,InvestmentBanking,Associate,23,2.2,236680.0,1.12,4.17,2.57,4.36
+25,InvestmentBanking,Director,33,10.7,243452.0,1.16,3.86,2.88,3.06
+26,InvestmentBanking,Managing Director,61,4.8,240626.0,1.19,3.41,3.4,4.58
+27,InvestmentBanking,Analyst,52,14.1,283818.0,1.42,4.73,3.33,3.07
+28,InvestmentBanking,Managing Director,31,0.7,220780.0,1.08,3.19,4.22,3.14
+29,InvestmentBanking,Associate,34,2.2,190024.0,0.93,3.37,3.44,4.64
+30,InvestmentBanking,Associate,27,10.3,204444.0,1.0,2.83,2.35,3.27
+31,InvestmentBanking,Managing Director,54,3.8,181654.0,0.89,3.11,2.97,4.4
+32,InvestmentBanking,Vice President,48,5.8,214167.0,1.02,3.32,3.37,3.91
+33,InvestmentBanking,Managing Director,26,1.2,195875.0,1.09,5.0,2.6,3.63
+34,InvestmentBanking,Vice President,40,21.5,310241.0,1.58,2.92,2.74,2.51
+35,InvestmentBanking,Associate,43,12.4,243887.0,1.15,3.42,1.97,2.92
+36,EquityResearch,Research Associate,31,5.1,161850.0,1.04,5.0,2.38,3.58
+37,EquityResearch,Senior Analyst,27,2.4,150657.0,0.87,4.12,3.5,3.57
+38,EquityResearch,Research Associate,28,2.5,163137.0,0.94,3.69,2.81,4.08
+39,EquityResearch,Research Associate,49,3.5,176556.0,1.04,3.5,2.69,3.99
+40,EquityResearch,Senior Analyst,29,2.5,198984.0,1.25,3.81,2.67,3.13
+41,EquityResearch,Equity Research Analyst,55,0.5,164767.0,0.88,4.24,3.52,3.13
+42,EquityResearch,Senior Analyst,54,6.9,187938.0,1.09,3.42,3.02,3.89
+43,EquityResearch,Sector Head,56,3.8,169168.0,1.0,3.74,2.94,2.75
+44,EquityResearch,Equity Research Analyst,38,0.6,133839.0,0.83,3.24,3.16,3.17
+45,EquityResearch,Equity Research Analyst,33,5.8,191155.0,1.21,4.44,3.51,4.85
+46,EquityResearch,Senior Analyst,48,4.8,172582.0,1.02,2.94,3.89,3.09
+47,EquityResearch,Research Associate,49,15.5,228302.0,1.4,4.1,4.47,4.24
+48,EquityResearch,Research Associate,59,0.9,141044.0,0.8,4.71,3.65,3.38
+49,EquityResearch,Sector Head,59,3.7,153349.0,0.87,3.75,4.01,4.17
+50,EquityResearch,Senior Analyst,40,5.0,179293.0,1.07,4.79,1.76,3.45
+51,EquityResearch,Sector Head,26,2.7,190523.0,1.14,4.18,2.8,4.29
+52,EquityResearch,Research Associate,35,4.7,180706.0,1.07,2.81,3.1,3.71
+53,EquityResearch,Sector Head,27,15.5,210832.0,1.23,4.69,2.68,3.31
+54,EquityResearch,Senior Analyst,53,2.4,166479.0,1.04,4.19,3.79,4.13
+55,EquityResearch,Senior Analyst,56,17.5,205158.0,1.28,3.13,3.28,4.59
+56,EquityResearch,Research Associate,55,11.4,183037.0,1.03,3.85,3.57,3.97
+57,EquityResearch,Research Associate,26,2.1,172104.0,1.04,3.61,3.73,3.94
+58,EquityResearch,Sector Head,23,1.6,159657.0,0.95,4.16,2.92,4.11
+59,EquityResearch,Sector Head,23,0.5,170183.0,0.9,2.46,2.16,2.4
+60,EquityResearch,Equity Research Analyst,24,7.8,186887.0,1.11,4.37,4.13,3.76
+61,Risk,Credit Risk Analyst,26,2.3,168788.0,1.1,2.83,2.78,2.91
+62,Risk,Credit Risk Analyst,29,7.4,182426.0,1.27,2.39,3.47,3.18
+63,Risk,Credit Risk Analyst,23,21.4,204101.0,1.37,3.02,2.83,3.16
+64,Risk,Operational Risk Specialist,40,4.4,155810.0,1.03,3.79,4.12,3.59
+65,Risk,Market Risk Manager,45,1.6,141874.0,0.98,3.81,3.11,4.01
+66,Risk,Model Validation Analyst,40,0.5,143071.0,0.94,4.36,2.61,4.0
+67,Risk,Market Risk Manager,47,5.9,152957.0,0.91,1.84,2.42,3.52
+68,Risk,Market Risk Manager,38,1.3,160928.0,1.0,3.78,2.92,3.63
+69,Risk,Operational Risk Specialist,48,0.5,137350.0,0.95,2.59,3.2,5.0
+70,Risk,Model Validation Analyst,42,11.4,189340.0,1.26,3.45,3.08,3.33
+71,Risk,Credit Risk Analyst,34,5.9,174078.0,1.18,3.79,3.0,4.07
+72,Risk,Market Risk Manager,28,3.1,127210.0,0.81,1.91,2.15,4.62
+73,Risk,Operational Risk Specialist,28,11.4,166650.0,0.93,3.07,4.89,4.06
+74,Risk,Market Risk Manager,34,9.6,158588.0,1.01,3.58,3.14,4.27
+75,Risk,Model Validation Analyst,43,1.6,137264.0,0.94,4.8,2.52,3.27
+76,Risk,Model Validation Analyst,61,1.7,166615.0,1.06,4.66,3.29,3.95
+77,Risk,Market Risk Manager,40,1.1,131647.0,0.83,3.86,2.1,4.18
+78,Risk,Credit Risk Analyst,41,9.2,145088.0,0.9,2.15,2.62,3.95
+79,Risk,Operational Risk Specialist,47,12.4,189722.0,1.24,2.69,3.69,4.2
+80,Risk,Model Validation Analyst,55,6.6,171842.0,1.22,3.43,2.99,3.35
+81,Risk,Credit Risk Analyst,56,2.6,138375.0,0.9,3.77,3.24,3.34
+82,Risk,Credit Risk Analyst,35,2.9,149825.0,0.94,3.94,3.33,2.93
+83,Risk,Operational Risk Specialist,22,4.0,144311.0,0.95,2.34,4.14,4.55
+84,Risk,Model Validation Analyst,52,5.1,127733.0,0.77,3.26,2.45,4.23
+85,Risk,Operational Risk Specialist,51,3.5,143029.0,0.94,4.79,2.34,3.95
+86,Risk,Model Validation Analyst,51,4.4,152743.0,0.91,2.48,2.9,3.49
+87,Risk,Model Validation Analyst,61,20.2,200073.0,1.32,3.04,4.09,3.42
+88,Risk,Operational Risk Specialist,54,13.7,208380.0,1.38,2.15,3.58,3.18
+89,Risk,Model Validation Analyst,49,3.0,159030.0,0.99,2.47,3.7,3.94
+90,Risk,Model Validation Analyst,31,1.2,138685.0,0.9,3.72,2.77,4.08
+91,Risk,Model Validation Analyst,38,7.3,189561.0,1.18,1.57,4.33,5.0
+92,Risk,Model Validation Analyst,33,4.8,155898.0,1.0,3.35,2.42,4.15
+93,Risk,Operational Risk Specialist,35,3.1,162649.0,1.16,3.64,2.96,3.71
+94,Risk,Credit Risk Analyst,44,16.9,213129.0,1.36,4.98,3.08,4.8
+95,Risk,Credit Risk Analyst,24,1.0,148727.0,0.92,3.64,4.05,3.61
+96,Risk,Model Validation Analyst,60,2.6,138231.0,0.88,3.43,2.01,2.83
+97,Risk,Model Validation Analyst,58,6.8,132614.0,0.9,3.72,2.7,3.01
+98,Risk,Market Risk Manager,34,0.9,176946.0,1.17,3.81,3.08,4.29
+99,Risk,Model Validation Analyst,41,3.9,149239.0,0.95,3.12,3.75,4.7
+100,Risk,Market Risk Manager,48,17.6,218451.0,1.41,4.26,1.62,3.3
+101,Compliance,AML Analyst,23,7.6,146954.0,0.98,3.34,3.98,3.65
+102,Compliance,Chief Compliance Officer,26,1.2,148368.0,0.99,2.77,3.59,3.67
+103,Compliance,Compliance Officer,38,0.5,141072.0,0.93,3.49,3.05,3.07
+104,Compliance,Compliance Officer,35,4.0,141132.0,0.94,3.42,3.99,2.43
+105,Compliance,Chief Compliance Officer,41,2.9,160365.0,1.14,4.11,2.4,3.13
+106,Compliance,Chief Compliance Officer,50,0.7,139921.0,0.97,3.72,3.31,4.27
+107,Compliance,Chief Compliance Officer,23,0.8,104099.0,0.78,4.45,2.49,2.68
+108,Compliance,AML Analyst,22,1.1,157590.0,1.13,3.2,2.57,3.81
+109,Compliance,Compliance Officer,58,10.4,197042.0,1.47,4.41,2.56,4.31
+110,Compliance,Regulatory Affairs Manager,53,5.1,165960.0,1.19,4.09,3.65,4.0
+111,Compliance,Regulatory Affairs Manager,35,0.5,124720.0,0.81,4.85,4.41,4.62
+112,Compliance,Compliance Officer,57,5.7,152567.0,1.08,2.63,3.48,3.84
+113,Compliance,Compliance Officer,61,0.5,130914.0,1.01,4.22,3.21,3.95
+114,Compliance,Compliance Officer,57,5.7,138334.0,0.96,2.9,2.32,4.11
+115,Compliance,AML Analyst,48,3.8,143372.0,1.05,4.35,3.92,3.82
+116,Compliance,Regulatory Affairs Manager,46,17.9,204408.0,1.45,4.53,3.97,3.72
+117,Compliance,Regulatory Affairs Manager,61,8.0,164101.0,1.14,3.04,3.38,3.5
+118,Compliance,Chief Compliance Officer,25,5.6,146675.0,1.04,3.72,2.4,3.51
+119,Compliance,Regulatory Affairs Manager,29,35.0,270636.0,1.83,1.81,1.9,3.82
+120,Compliance,Regulatory Affairs Manager,37,5.6,167707.0,1.04,3.82,4.29,3.12
+121,Compliance,Chief Compliance Officer,58,2.7,129018.0,0.89,4.64,4.49,3.6
+122,Compliance,Compliance Officer,61,0.9,156449.0,1.09,3.6,3.46,5.0
+123,Compliance,Regulatory Affairs Manager,45,3.3,155626.0,1.07,3.11,3.84,3.82
+124,Compliance,AML Analyst,37,1.1,138646.0,0.99,1.95,3.67,3.21
+125,Compliance,Compliance Officer,25,20.1,209306.0,1.43,4.16,2.26,3.56
+126,Compliance,Compliance Officer,40,4.7,152087.0,1.01,4.08,3.24,2.66
+127,Compliance,Chief Compliance Officer,26,4.7,145297.0,1.01,3.48,3.36,4.37
+128,Compliance,Regulatory Affairs Manager,61,4.0,131242.0,0.93,4.5,2.9,2.3
+129,Compliance,Chief Compliance Officer,55,6.7,148901.0,1.02,3.53,2.98,4.43
+130,Compliance,AML Analyst,45,14.2,191751.0,1.26,3.81,3.27,3.71
+131,Compliance,Compliance Officer,30,6.6,182426.0,1.26,2.48,3.25,3.15
+132,Compliance,Regulatory Affairs Manager,29,3.7,151837.0,1.03,4.29,4.01,4.66
+133,Compliance,Regulatory Affairs Manager,43,3.7,120069.0,0.82,2.81,3.28,3.46
+134,Compliance,AML Analyst,42,1.2,132543.0,0.95,3.31,3.25,3.8
+135,Compliance,Compliance Officer,60,7.2,179345.0,1.27,3.97,2.39,3.75
+136,WealthManagement,Client Service Associate,23,1.7,144602.0,1.02,3.89,4.04,3.97
+137,WealthManagement,Private Banker,43,0.5,97462.0,0.68,1.0,1.99,4.07
+138,WealthManagement,Client Service Associate,58,2.5,135680.0,0.98,3.11,4.77,3.8
+139,WealthManagement,Portfolio Manager,53,3.6,151451.0,0.97,3.41,3.18,2.98
+140,WealthManagement,Wealth Manager,33,0.5,149504.0,1.01,3.27,3.13,3.93
+141,WealthManagement,Financial Advisor,58,2.4,130790.0,0.94,3.17,2.21,4.07
+142,WealthManagement,Portfolio Manager,60,4.3,155623.0,1.08,3.8,3.64,2.96
+143,WealthManagement,Wealth Manager,57,1.9,150888.0,1.0,3.11,3.81,4.69
+144,WealthManagement,Portfolio Manager,36,6.8,161221.0,1.1,4.11,3.28,3.88
+145,WealthManagement,Wealth Manager,38,1.9,132955.0,0.87,4.01,3.2,4.0
+146,WealthManagement,Wealth Manager,48,4.8,164819.0,1.13,2.51,4.21,3.5
+147,WealthManagement,Client Service Associate,56,1.7,128079.0,0.87,3.28,2.96,4.17
+148,WealthManagement,Wealth Manager,48,8.1,173210.0,1.2,1.81,2.94,2.49
+149,WealthManagement,Portfolio Manager,32,7.1,177899.0,1.26,3.66,2.85,4.09
+150,WealthManagement,Private Banker,38,10.5,190742.0,1.26,4.14,3.67,3.23
+151,WealthManagement,Client Service Associate,43,0.5,138401.0,0.89,2.81,2.82,4.13
+152,WealthManagement,Wealth Manager,55,4.7,137265.0,0.91,3.59,4.91,2.97
+153,WealthManagement,Portfolio Manager,31,9.0,177118.0,1.2,3.86,3.09,4.67
+154,WealthManagement,Portfolio Manager,54,4.6,144903.0,0.97,2.64,3.52,4.67
+155,WealthManagement,Wealth Manager,27,5.3,141319.0,0.94,2.23,2.56,3.94
+156,WealthManagement,Financial Advisor,38,3.9,143061.0,1.04,3.7,3.09,4.06
+157,WealthManagement,Wealth Manager,32,13.3,183195.0,1.16,2.27,3.66,3.63
+158,WealthManagement,Private Banker,44,4.6,164379.0,1.12,2.98,4.06,4.75
+159,WealthManagement,Portfolio Manager,51,5.1,172455.0,1.22,3.99,3.62,4.11
+160,WealthManagement,Portfolio Manager,36,2.1,125218.0,0.8,4.54,3.79,4.69
+161,WealthManagement,Portfolio Manager,54,1.7,138823.0,0.94,3.56,3.99,3.58
+162,WealthManagement,Wealth Manager,43,0.8,144454.0,0.97,2.9,3.03,3.69
+163,WealthManagement,Wealth Manager,48,8.6,168616.0,1.12,1.82,2.57,3.64
+164,WealthManagement,Private Banker,54,0.5,134981.0,0.97,3.55,3.23,3.75
+165,WealthManagement,Private Banker,52,8.0,136209.0,0.82,3.07,3.21,4.21
+166,WealthManagement,Portfolio Manager,25,1.2,153581.0,1.09,3.65,3.87,3.96
+167,WealthManagement,Client Service Associate,48,6.5,162806.0,1.1,4.68,1.48,2.95
+168,WealthManagement,Portfolio Manager,30,14.2,189148.0,1.2,2.71,2.6,5.0
+169,WealthManagement,Wealth Manager,50,0.5,132117.0,0.83,1.97,3.12,3.2
+170,WealthManagement,Wealth Manager,52,10.9,168664.0,1.14,3.79,3.49,3.01
+171,WealthManagement,Private Banker,44,17.1,212799.0,1.43,2.4,2.98,4.02
+172,WealthManagement,Portfolio Manager,28,3.1,168287.0,1.18,3.29,3.73,4.96
+173,WealthManagement,Private Banker,45,1.5,128763.0,0.94,2.65,2.27,3.51
+174,WealthManagement,Private Banker,29,2.8,137682.0,0.89,2.93,2.58,5.0
+175,WealthManagement,Wealth Manager,32,3.1,140933.0,0.94,2.93,1.34,2.97
+176,WealthManagement,Financial Advisor,26,8.0,151292.0,1.09,3.46,4.1,4.05
+177,WealthManagement,Financial Advisor,61,1.4,147869.0,1.03,3.04,3.59,4.14
+178,WealthManagement,Client Service Associate,28,7.0,147372.0,1.0,3.76,2.65,3.82
+179,WealthManagement,Portfolio Manager,34,1.7,162886.0,1.16,2.7,4.38,3.48
+180,WealthManagement,Private Banker,39,9.0,165943.0,1.03,3.36,2.11,4.38
+181,WealthManagement,Client Service Associate,44,5.2,160018.0,1.04,3.0,3.74,3.78
+182,WealthManagement,Private Banker,25,1.9,156364.0,1.06,4.14,2.89,3.77
+183,WealthManagement,Private Banker,32,3.0,156210.0,1.08,3.97,4.28,4.67
+184,WealthManagement,Client Service Associate,37,0.9,138869.0,0.91,4.8,3.45,3.67
+185,WealthManagement,Wealth Manager,51,11.2,153117.0,1.07,3.55,3.38,3.0
+186,RetailBanking,Relationship Manager,57,6.2,95111.0,1.16,3.15,2.92,2.52
+187,RetailBanking,Branch Manager,43,8.6,82578.0,0.97,2.57,2.52,3.83
+188,RetailBanking,Loan Officer,36,3.9,88362.0,1.11,3.3,1.46,3.2
+189,RetailBanking,Relationship Manager,38,12.8,101284.0,1.17,4.14,2.73,4.04
+190,RetailBanking,Teller,34,2.0,77972.0,0.96,2.31,4.03,3.34
+191,RetailBanking,Teller,48,2.8,69589.0,0.85,4.27,3.41,2.85
+192,RetailBanking,Loan Officer,27,2.8,67327.0,0.76,4.2,3.39,4.05
+193,RetailBanking,Loan Officer,60,0.7,81474.0,1.12,3.33,2.64,4.06
+194,RetailBanking,Branch Manager,23,13.5,97655.0,1.3,3.76,2.69,4.35
+195,RetailBanking,Loan Officer,58,0.8,81090.0,0.92,3.78,4.54,4.08
+196,RetailBanking,Teller,43,6.8,87141.0,1.04,3.2,3.84,2.76
+197,RetailBanking,Branch Manager,34,0.6,79171.0,0.9,4.56,4.07,4.38
+198,RetailBanking,Loan Officer,55,12.5,102905.0,1.27,3.94,3.32,3.97
+199,RetailBanking,Branch Manager,60,1.7,57226.0,0.68,3.37,1.97,3.86
+200,RetailBanking,Personal Banker,25,1.8,81648.0,0.94,2.96,4.23,3.47
+201,RetailBanking,Branch Manager,28,1.0,91117.0,1.13,3.35,3.6,2.95
+202,RetailBanking,Personal Banker,31,0.5,74594.0,0.88,3.04,3.69,3.95
+203,RetailBanking,Branch Manager,43,4.3,88605.0,1.05,5.0,2.1,4.56
+204,RetailBanking,Personal Banker,35,1.8,95824.0,1.21,4.28,3.22,3.67
+205,RetailBanking,Personal Banker,43,2.5,91221.0,1.11,2.77,3.78,4.35
+206,RetailBanking,Teller,50,0.5,74093.0,0.85,2.81,2.06,3.94
+207,RetailBanking,Personal Banker,42,2.9,59416.0,0.66,4.4,2.73,4.02
+208,RetailBanking,Teller,45,1.3,76878.0,0.95,5.0,4.26,3.62
+209,RetailBanking,Branch Manager,41,0.6,80279.0,0.97,3.18,4.23,3.73
+210,RetailBanking,Personal Banker,56,6.2,102230.0,1.26,4.27,2.69,3.29
+211,RetailBanking,Loan Officer,39,4.9,86236.0,0.98,2.41,2.2,2.74
+212,RetailBanking,Branch Manager,27,1.2,77549.0,0.83,3.35,3.09,5.0
+213,RetailBanking,Personal Banker,60,1.2,90401.0,1.12,3.95,3.28,4.0
+214,RetailBanking,Personal Banker,50,2.2,86524.0,0.98,3.76,3.33,3.43
+215,RetailBanking,Branch Manager,27,6.5,81672.0,0.97,2.62,3.43,3.11
+216,RetailBanking,Personal Banker,54,11.6,96882.0,1.14,4.56,3.43,3.67
+217,RetailBanking,Branch Manager,37,3.1,81628.0,1.09,3.61,3.25,4.13
+218,RetailBanking,Teller,34,1.6,65972.0,0.81,2.93,4.12,3.61
+219,RetailBanking,Personal Banker,56,11.1,98672.0,1.17,4.36,4.04,3.7
+220,RetailBanking,Loan Officer,41,6.8,94361.0,1.16,4.29,2.38,5.0
+221,RetailBanking,Teller,31,8.0,80249.0,0.93,4.71,3.02,4.3
+222,RetailBanking,Personal Banker,38,1.8,89203.0,1.07,2.08,2.64,4.13
+223,RetailBanking,Branch Manager,28,0.9,71606.0,0.84,3.21,2.24,3.42
+224,RetailBanking,Teller,29,1.7,84945.0,1.02,3.19,3.3,3.31
+225,RetailBanking,Relationship Manager,54,2.6,76122.0,0.86,3.63,3.71,2.85
+226,RetailBanking,Teller,32,2.6,83467.0,1.01,2.34,2.32,3.82
+227,RetailBanking,Loan Officer,44,4.5,93947.0,1.13,3.94,2.71,3.73
+228,RetailBanking,Branch Manager,51,4.8,92960.0,1.08,3.14,2.23,2.95
+229,RetailBanking,Loan Officer,47,5.0,89038.0,1.1,3.76,3.37,4.75
+230,RetailBanking,Relationship Manager,51,8.9,103518.0,1.32,2.36,2.98,4.61
+231,RetailBanking,Branch Manager,33,10.8,97643.0,1.16,3.73,3.02,3.77
+232,RetailBanking,Branch Manager,27,6.6,93941.0,1.28,2.08,3.43,3.34
+233,RetailBanking,Personal Banker,28,5.3,92726.0,1.18,3.65,3.99,2.39
+234,RetailBanking,Personal Banker,31,0.7,84676.0,0.97,2.84,3.3,3.79
+235,RetailBanking,Personal Banker,53,5.7,74627.0,0.95,3.51,3.06,2.92
+236,RetailBanking,Personal Banker,54,9.8,93505.0,1.17,2.31,3.24,3.73
+237,RetailBanking,Loan Officer,45,7.9,87461.0,1.03,4.52,3.58,3.57
+238,RetailBanking,Branch Manager,42,0.9,79906.0,0.88,4.1,3.29,5.0
+239,RetailBanking,Branch Manager,36,2.1,93264.0,1.19,2.94,3.36,3.8
+240,RetailBanking,Personal Banker,33,23.2,126462.0,1.45,3.61,3.52,3.66
+241,RetailBanking,Branch Manager,35,0.8,79593.0,0.93,3.28,2.15,3.18
+242,RetailBanking,Branch Manager,44,2.6,76155.0,0.96,3.07,3.37,3.72
+243,RetailBanking,Loan Officer,59,0.6,64517.0,0.71,3.07,2.33,4.05
+244,RetailBanking,Loan Officer,53,1.5,65426.0,0.8,2.6,2.85,3.88
+245,RetailBanking,Branch Manager,51,2.7,95272.0,1.13,3.71,3.92,3.7
+246,Fintech,Payments Engineer,54,4.6,192458.0,1.09,2.69,3.29,3.45
+247,Fintech,Payments Engineer,35,1.6,146385.0,0.88,2.38,2.74,4.95
+248,Fintech,Quantitative Developer,24,0.5,147352.0,0.81,3.56,3.23,3.75
+249,Fintech,Data Engineer,47,3.7,154572.0,0.85,4.23,2.24,3.69
+250,Fintech,Platform Engineer,53,1.4,160461.0,0.99,3.91,2.28,4.2
+251,Fintech,Trading Systems Engineer,56,1.5,172159.0,0.95,4.21,2.66,3.43
+252,Fintech,Quantitative Developer,33,6.3,207711.0,1.21,4.87,4.79,3.18
+253,Fintech,Payments Engineer,27,3.0,162121.0,0.89,2.65,2.46,3.71
+254,Fintech,Platform Engineer,25,2.0,154707.0,1.02,3.14,3.25,3.02
+255,Fintech,Platform Engineer,41,9.0,207820.0,1.11,3.67,2.41,4.68
+256,Fintech,Quantitative Developer,24,2.5,133171.0,0.71,4.05,4.05,4.47
+257,Fintech,Platform Engineer,40,0.9,180465.0,0.94,3.49,3.39,3.62
+258,Fintech,Platform Engineer,51,0.5,157163.0,0.89,3.05,2.89,3.78
+259,Fintech,Quantitative Developer,35,5.2,178213.0,1.02,1.96,3.53,3.8
+260,Fintech,Quantitative Developer,52,1.2,134312.0,0.66,3.72,3.2,3.9
+261,Fintech,Trading Systems Engineer,45,8.9,198635.0,1.02,4.12,4.06,4.19
+262,Fintech,Trading Systems Engineer,55,2.8,187447.0,1.14,2.8,3.04,4.25
+263,Fintech,Payments Engineer,32,2.5,178647.0,1.04,3.57,3.35,3.64
+264,Fintech,Trading Systems Engineer,51,1.2,156470.0,0.89,4.2,2.15,3.01
+265,Fintech,Quantitative Developer,31,33.0,300605.0,1.69,4.03,2.75,3.94
+266,Fintech,Payments Engineer,33,1.0,172194.0,0.94,3.37,3.93,4.04
+267,Fintech,Platform Engineer,46,6.4,173551.0,1.06,4.32,3.4,3.89
+268,Fintech,Platform Engineer,29,2.6,166460.0,0.96,4.2,2.81,3.43
+269,Fintech,Quantitative Developer,45,7.2,165344.0,0.98,4.95,4.2,2.82
+270,Fintech,Trading Systems Engineer,23,0.8,156322.0,0.89,1.89,3.39,3.16
+271,Fintech,Trading Systems Engineer,53,31.2,318414.0,1.86,2.87,2.4,2.51
+272,Fintech,Quantitative Developer,23,4.2,155224.0,0.9,3.14,2.45,3.47
+273,Fintech,Platform Engineer,30,1.6,165520.0,0.97,2.57,3.22,3.89
+274,Fintech,Trading Systems Engineer,60,14.5,216951.0,1.26,3.94,1.16,4.51
+275,Fintech,Payments Engineer,46,3.2,191789.0,1.07,2.33,2.43,4.42
+276,Operations,Operations Analyst,55,2.6,101880.0,0.92,3.03,2.49,4.32
+277,Operations,Reconciliation Analyst,28,1.0,93937.0,0.86,4.53,2.25,4.76
+278,Operations,Middle Office Analyst,37,10.0,116980.0,1.08,2.48,3.27,3.06
+279,Operations,Middle Office Analyst,61,3.7,88472.0,0.81,2.77,2.59,5.0
+280,Operations,Reconciliation Analyst,52,0.5,79549.0,0.73,3.67,2.48,4.34
+281,Operations,Reconciliation Analyst,60,13.9,129006.0,1.24,2.99,3.01,3.66
+282,Operations,Operations Analyst,49,0.5,98690.0,0.94,3.16,3.76,3.66
+283,Operations,Settlement Specialist,33,1.4,115089.0,1.03,4.12,1.87,3.93
+284,Operations,Settlement Specialist,31,6.3,114544.0,1.07,3.52,3.02,3.33
+285,Operations,Operations Analyst,22,4.9,101611.0,0.93,2.41,3.47,4.13
+286,Operations,Settlement Specialist,22,8.7,120650.0,1.17,3.74,3.14,3.48
+287,Operations,Reconciliation Analyst,61,0.5,90099.0,0.88,3.7,2.22,4.47
+288,Operations,Operations Analyst,22,10.9,137457.0,1.35,2.49,4.44,4.2
+289,Operations,Operations Analyst,27,0.5,111664.0,1.08,3.48,2.74,4.15
+290,Operations,Operations Analyst,59,4.3,99725.0,0.96,3.44,2.27,2.92
+291,Operations,Operations Analyst,33,7.1,117162.0,1.1,4.55,2.85,4.2
+292,Operations,Operations Analyst,23,3.4,111609.0,1.04,4.3,2.5,3.98
+293,Operations,Middle Office Analyst,36,3.0,121761.0,1.13,2.4,2.5,4.2
+294,Operations,Settlement Specialist,30,0.7,85285.0,0.87,5.0,3.46,4.15
+295,Operations,Reconciliation Analyst,59,16.6,136663.0,1.25,2.34,4.41,3.96
+296,Operations,Operations Analyst,42,3.7,103970.0,1.04,3.47,3.57,3.68
+297,Operations,Settlement Specialist,23,1.3,79905.0,0.75,3.55,2.3,3.78
+298,Operations,Settlement Specialist,37,4.5,99193.0,0.97,3.81,2.39,3.9
+299,Operations,Middle Office Analyst,61,5.4,109500.0,1.02,3.0,3.53,3.92
+300,Operations,Middle Office Analyst,55,12.3,137933.0,1.32,4.13,3.81,3.32
+301,Operations,Settlement Specialist,25,0.8,90357.0,0.9,3.28,2.84,4.64
+302,Operations,Middle Office Analyst,56,1.9,102411.0,1.0,3.9,3.84,3.92
+303,Operations,Reconciliation Analyst,37,2.8,103578.0,1.0,3.67,3.74,4.13
+304,Operations,Middle Office Analyst,42,1.9,100979.0,0.96,3.65,4.74,3.49
+305,Operations,Middle Office Analyst,38,1.8,101136.0,1.08,3.2,3.43,3.32

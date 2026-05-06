@@ -1,0 +1,180 @@
+# GLiNER 10-type re-fine-tune config (PATH_B5_PLUS_FINAL §1.④, Day 2)
+#
+# Warm-start from the v3 ModernBERT-large checkpoint, retrain on the v7
+# 10-type schema (SKILL / TOOL / CERT / DEGREE / EMPLOYER / YEARS_EXP /
+# INDUSTRY / LOCATION / PROJECT / SOFT_SKILL).
+#
+# Reviewer follow-up #2 + Day-2 launch corrections — the v7 training manifest
+# is synthetic-dominated (~79% synthetic). Source-balanced sampling + an
+# epoch-decaying synthetic cap keeps synthetic from dominating any epoch:
+#   • epoch 1                synth <= ~40%   (cap = 2400)
+#   • mid epochs (2-9)       synth <= ~35%   (cap = 1700-2400)
+#   • final 3 epochs         synth <= ~30%   (cap = 1500)
+#
+# This file is hashed by scripts/gliner_preflight.py; any byte-level change
+# bumps `config_hash` and the snapshot.
+
+schema_version: v7
+label_schema_version: v7
+label_types:
+  - SKILL
+  - TOOL
+  - CERT
+  - DEGREE
+  - EMPLOYER
+  - YEARS_EXP
+  - INDUSTRY
+  - LOCATION
+  - PROJECT
+  - SOFT_SKILL
+
+# --------------------------------------------------------------------------
+# Backbone & checkpoints
+# --------------------------------------------------------------------------
+backbone:
+  family: ModernBERT-large
+  hidden_size: 1024
+  max_position_embeddings: 8192
+  base_checkpoint_path: ~/Downloads/gliner_energy_modern_large_v3_finetuned
+  output_checkpoint_dir: models/saved/gliner_v3_10type
+
+# --------------------------------------------------------------------------
+# Optimization
+# --------------------------------------------------------------------------
+optimizer:
+  name: AdamW
+  learning_rate: 3.0e-5
+  weight_decay: 0.01
+  llrd: 0.95              # layer-wise learning-rate decay (per-layer multiplier)
+
+scheduler:
+  name: linear_decay_with_warmup
+  warmup_ratio: 0.10
+
+training:
+  epochs: 12
+  batch_size: 8
+  grad_accum: 3            # effective batch = 24
+  max_seq_len: 1536
+  mixed_precision: bf16    # encoder; head + loss in fp32 for MPS stability
+  device: mps
+  seed: 42
+  label_smoothing: 0.02
+
+early_stopping:
+  metric: val_macro_f1     # tier-2/3 macro F1 on the dev set ONLY
+  patience: 5
+  min_delta: 0.001
+
+# --------------------------------------------------------------------------
+# Source-balanced sampling (reviewer follow-up #2)
+# --------------------------------------------------------------------------
+# The v7 training manifest contains ~14,850 synthetic samples vs ~3,986 real
+# (hand-labeled + mehyaar + dataturks). Without a cap the synthetic samples
+# dominate every epoch, drifting the model toward template-style structure.
+#
+# `synthetic_cap_per_epoch` (a list keyed by epoch) downsamples synthetic
+# samples each epoch. Real samples are always fully included. The trainer
+# computes batch composition AFTER applying the cap.
+#
+# `per_source_target_batch_fraction` is the ideal mix the trainer should
+# attempt to maintain when constructing each batch (post-cap). The trainer
+# logs the actual mix per epoch and asserts that synthetic <= 50% in the
+# last 5 epochs (see `assertions` below).
+sampling:
+  source_balanced: true
+
+  # Hard cap on synthetic samples used per epoch. Real-data total is 3,986
+  # (hand_labeled 2800 + mehyaar 986 + dataturks 200), so the synthetic
+  # fraction is `cap / (cap + 3986)`. Schedule keeps synthetic <= ~40% in
+  # epoch 1 and <= ~30% in the final 3 epochs.
+  synthetic_cap_per_epoch:
+    1:   2400        # ~37.6% synth
+    2:   2400        # ~37.6% synth
+    3:   2200        # ~35.6% synth
+    4:   2000        # ~33.4% synth
+    5:   2000        # ~33.4% synth
+    6:   1800        # ~31.1% synth
+    7:   1800        # ~31.1% synth
+    8:   1700        # ~29.9% synth
+    9:   1700        # ~29.9% synth
+    10:  1500        # ~27.3% synth — final 3
+    11:  1500        # ~27.3% synth — final 3
+    12:  1500        # ~27.3% synth — final 3
+
+  # Target per-source fraction in each batch. Sum need not equal 1.0; trainer
+  # normalises. These are TARGETS; oversampling minority sources is allowed.
+  per_source_target_batch_fraction:
+    synthetic_v7:    0.40
+    hand_labeled_v7: 0.35
+    mehyaar_v7:      0.20
+    dataturks_v7:    0.05
+
+  # Always include at least one sample from each non-synthetic source per batch
+  min_real_samples_per_batch: 2
+
+  # Print per-source batch composition every N steps
+  log_per_source_batch_mix_every_n_steps: 50
+
+# --------------------------------------------------------------------------
+# Data wiring (reviewer follow-up #7 — pre-flight reads these paths)
+# --------------------------------------------------------------------------
+data:
+  training_manifest_path: data/processed/ner_training_v7.json
+
+  # Files the trainer MUST NOT touch (pre-flight asserts no overlap)
+  excluded_eval_files:
+    - data/processed/eval_held_out.json
+    - data/processed/eval_held_out_v7.json
+    - data/processed/eval_dev_v1.json     # Day-3 deliverable
+    - data/processed/eval_blind_v1.json   # Day-3 deliverable
+
+  # Held-out doc indices anchored from the v6 baseline; these MUST be
+  # excluded by source × source_index lookup.
+  frozen_held_out_indices:
+    dataturks: [15, 21, 27, 35, 43, 50, 53, 60, 76, 81,
+                99, 106, 116, 127, 130, 152, 161, 168, 178, 199]
+    hand_labeled: [4, 9, 16, 18, 20]
+
+# --------------------------------------------------------------------------
+# Trainer-time invariants (asserted before training starts AND between epochs)
+# --------------------------------------------------------------------------
+assertions:
+  # Reviewer #2 (Day-2 launch correction): synthetic must never dominate any
+  # epoch. Three layered ceilings — first epoch is the loosest, last 3 the
+  # strictest. The trainer prints the actual per-epoch source mix at the
+  # start of each epoch and asserts each ceiling.
+  synthetic_max_fraction_per_epoch: 0.50
+  synthetic_max_fraction_first_epoch: 0.40
+  synthetic_max_fraction_last_n_epochs:
+    last_n_epochs: 3
+    max_fraction: 0.30
+
+  # Held-out leak guard — assert at startup, no exceptions
+  zero_eval_doc_overlap_with_training: true
+
+  # Reviewer launch correction #1: the dev/blind eval pool is reserved.
+  # Pre-flight asserts that no document from `reserved_eval_source_pool`
+  # appears in the training manifest — even before Day-3 splits exist.
+  reserved_eval_source_pool: snehaanbhawal
+
+  # Schema version pinned — any drift fails
+  pin_label_schema_version: v7
+
+# --------------------------------------------------------------------------
+# Output / checkpointing
+# --------------------------------------------------------------------------
+checkpointing:
+  best_metric: val_macro_f1
+  save_best: true
+  save_last_epoch: true
+  save_per_class_eval_to_disk: true
+  rolling_safety_checkpoint: true     # MPS-fault recovery
+
+# --------------------------------------------------------------------------
+# Eval during training (DEV ONLY — blind set is never touched here)
+# --------------------------------------------------------------------------
+eval:
+  set: eval_dev_v1                    # NEVER eval_blind_v1 during training
+  per_class_metrics: true
+  bootstrap_ci: false                 # CI is only for Day-10 final benchmark

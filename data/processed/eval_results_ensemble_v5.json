@@ -1,0 +1,233 @@
+{
+  "mode": "ensemble",
+  "tag": "v5",
+  "n_samples": 25,
+  "overall": {
+    "precision": 0.7329192546583851,
+    "recall": 0.8251748251748252,
+    "f1": 0.7763157894736843
+  },
+  "per_entity_type": {
+    "SKILL": {
+      "precision": 0.7666666666666667,
+      "recall": 0.7796610169491526,
+      "f1-score": 0.773109243697479,
+      "support": 59
+    },
+    "CERT": {
+      "precision": 0.6666666666666666,
+      "recall": 1.0,
+      "f1-score": 0.8,
+      "support": 12
+    },
+    "DEGREE": {
+      "precision": 0.7777777777777778,
+      "recall": 0.7368421052631579,
+      "f1-score": 0.7567567567567567,
+      "support": 19
+    },
+    "EMPLOYER": {
+      "precision": 0.6666666666666666,
+      "recall": 0.9375,
+      "f1-score": 0.7792207792207793,
+      "support": 32
+    },
+    "YEARS_EXP": {
+      "precision": 0.8,
+      "recall": 0.7619047619047619,
+      "f1-score": 0.7804878048780488,
+      "support": 21
+    }
+  },
+  "by_source": {
+    "dataturks": {
+      "n_resumes": 20,
+      "precision": 0.6372549019607843,
+      "recall": 0.7647058823529411,
+      "f1": 0.6951871657754011
+    },
+    "hand_labeled": {
+      "n_resumes": 5,
+      "precision": 0.8983050847457628,
+      "recall": 0.9137931034482759,
+      "f1": 0.9059829059829059
+    }
+  },
+  "sample_results": [
+    {
+      "source": "dataturks",
+      "source_index": 15,
+      "n_tokens": 256,
+      "n_gold_entities": 11,
+      "n_pred_entities": 6
+    },
+    {
+      "source": "dataturks",
+      "source_index": 21,
+      "n_tokens": 256,
+      "n_gold_entities": 8,
+      "n_pred_entities": 9
+    },
+    {
+      "source": "dataturks",
+      "source_index": 27,
+      "n_tokens": 256,
+      "n_gold_entities": 2,
+      "n_pred_entities": 4
+    },
+    {
+      "source": "dataturks",
+      "source_index": 35,
+      "n_tokens": 193,
+      "n_gold_entities": 4,
+      "n_pred_entities": 10
+    },
+    {
+      "source": "dataturks",
+      "source_index": 43,
+      "n_tokens": 256,
+      "n_gold_entities": 2,
+      "n_pred_entities": 4
+    },
+    {
+      "source": "dataturks",
+      "source_index": 49,
+      "n_tokens": 256,
+      "n_gold_entities": 2,
+      "n_pred_entities": 3
+    },
+    {
+      "source": "dataturks",
+      "source_index": 50,
+      "n_tokens": 256,
+      "n_gold_entities": 5,
+      "n_pred_entities": 4
+    },
+    {
+      "source": "dataturks",
+      "source_index": 60,
+      "n_tokens": 256,
+      "n_gold_entities": 6,
+      "n_pred_entities": 6
+    },
+    {
+      "source": "dataturks",
+      "source_index": 68,
+      "n_tokens": 256,
+      "n_gold_entities": 3,
+      "n_pred_entities": 3
+    },
+    {
+      "source": "dataturks",
+      "source_index": 69,
+      "n_tokens": 256,
+      "n_gold_entities": 3,
+      "n_pred_entities": 4
+    },
+    {
+      "source": "dataturks",
+      "source_index": 72,
+      "n_tokens": 29,
+      "n_gold_entities": 4,
+      "n_pred_entities": 5
+    },
+    {
+      "source": "dataturks",
+      "source_index": 75,
+      "n_tokens": 256,
+      "n_gold_entities": 2,
+      "n_pred_entities": 4
+    },
+    {
+      "source": "dataturks",
+      "source_index": 97,
+      "n_tokens": 113,
+      "n_gold_entities": 8,
+      "n_pred_entities": 11
+    },
+    {
+      "source": "dataturks",
+      "source_index": 154,
+      "n_tokens": 256,
+      "n_gold_entities": 2,
+      "n_pred_entities": 3
+    },
+    {
+      "source": "dataturks",
+      "source_index": 161,
+      "n_tokens": 191,
+      "n_gold_entities": 5,
+      "n_pred_entities": 4
+    },
+    {
+      "source": "dataturks",
+      "source_index": 166,
+      "n_tokens": 256,
+      "n_gold_entities": 3,
+      "n_pred_entities": 5
+    },
+    {
+      "source": "dataturks",
+      "source_index": 170,
+      "n_tokens": 256,
+      "n_gold_entities": 4,
+      "n_pred_entities": 4
+    },
+    {
+      "source": "dataturks",
+      "source_index": 184,
+      "n_tokens": 256,
+      "n_gold_entities": 2,
+      "n_pred_entities": 3
+    },
+    {
+      "source": "dataturks",
+      "source_index": 185,
+      "n_tokens": 256,
+      "n_gold_entities": 4,
+      "n_pred_entities": 7
+    },
+    {
+      "source": "dataturks",
+      "source_index": 199,
+      "n_tokens": 256,
+      "n_gold_entities": 5,
+      "n_pred_entities": 3
+    },
+    {
+      "source": "hand_labeled",
+      "source_index": 4,
+      "n_tokens": 59,
+      "n_gold_entities": 10,
+      "n_pred_entities": 13
+    },
+    {
+      "source": "hand_labeled",
+      "source_index": 9,
+      "n_tokens": 62,
+      "n_gold_entities": 11,
+      "n_pred_entities": 11
+    },
+    {
+      "source": "hand_labeled",
+      "source_index": 16,
+      "n_tokens": 70,
+      "n_gold_entities": 13,
+      "n_pred_entities": 13
+    },
+    {
+      "source": "hand_labeled",
+      "source_index": 18,
+      "n_tokens": 76,
+      "n_gold_entities": 13,
+      "n_pred_entities": 11
+    },
+    {
+      "source": "hand_labeled",
+      "source_index": 20,
+      "n_tokens": 62,
+      "n_gold_entities": 11,
+      "n_pred_entities": 11
+    }
+  ]
+}
