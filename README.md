@@ -127,8 +127,7 @@ The four NER models cooperate through a per class router. Each class is owned by
 │       ├── eval_dev_v1_adjudicated.manifest.json            top level manifest with sha256 and integrity bracket
 │       └── eval_results_*.json                              held out F1 receipts per model variant
 ├── docs/
-│   ├── EVAL_METHODOLOGY.md  multi stage adjudication pipeline that produced the canonical labels
-│   └── DEMO_SCRIPT.md       narration script for the recorded demo
+│   └── EVAL_METHODOLOGY.md  multi stage adjudication pipeline that produced the canonical labels
 ├── industries/              industry profile plugins (energy, finance template)
 ├── models/
 │   ├── ner_model.py         Routed NER ensemble (DistilBERT, GLiNER, ModernBERT, gazetteer)

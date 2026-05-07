@@ -53,3 +53,8 @@ data/data/
 
 # Kaggle local
 .kaggle/
+
+# Local writeup and demo script artifacts (kept locally, not pushed)
+FN_WriteUp_Musil_Jiri_ITAI2376.*
+docs/DEMO_SCRIPT.*
+docs/DEMO_TALKING_POINTS.*
