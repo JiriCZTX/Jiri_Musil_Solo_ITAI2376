@@ -31,46 +31,96 @@ I built both because workforce planning is a high stakes and audited domain. A 2
 
 ## Architecture
 
+The system reads a candidate (resume + job description) into Agent 1 and reads twelve months of HRIS time series for the receiving department into Agent 2. Agent 1 runs a routed four-model NER ensemble plus Sentence BERT and produces a fully named skill gap with coaching paths. Agent 2 runs a Bi-LSTM with attention plus dual uncertainty quantifiers (MC Dropout and Split Conformal) and produces a 19 signal workforce analyzer output plus a knapsack portfolio plan. The 21 tools that wrap those analyses are consumed by either of two interchangeable orchestrators: a proprietary deterministic brain (default, LLM free) that votes three independent decision procedures against a 20 cell matrix, or the optional CrewAI plus LLM path. A Human in the Lead feedback loop persists corrections across sessions and is replayed back into the brain in adaptive mode. The single output is a four section boardroom memo plus a Streamlit dashboard view.
+
 ```mermaid
 flowchart LR
-    R[Resume / Job description]:::input --> A1
-    H[(HRIS time series)]:::input --> A2
-    F[(Cross session feedback store)]:::mem --> BRAIN
+    R[("Resume / Job description<br/>raw text or PDF / DOCX")]:::input
+    H[("HRIS time series<br/>12 months × 8 features<br/>employees · individual_monthly · monthly_department")]:::input
+    IND[/"Industry profile plugin<br/>ENERGY · FINANCE · _template<br/>runtime swappable"/]:::config
+    PII["PII Masker<br/>regex + spaCy fallback<br/>masks personal PII only<br/>preserves professional locations<br/>(basins, offshore blocks, work cities)"]:::guard
 
-    subgraph A1["Agent 1, Talent Intelligence"]
+    R --> PII
+
+    subgraph A1["Agent 1 · Talent Intelligence"]
       direction TB
-      NER[Routed NER ensemble<br/>DistilBERT v6 + GLiNER + ModernBERT v11 + gazetteer]:::model
-      SBERT[Sentence BERT cosine + Hungarian match]:::model
-      GAP[19 signal Skill Gap Analyzer]:::tool
+      NER["Routed NER ensemble · per-class hard ownership<br/>· DistilBERT v6 (fine tuned) → SKILL · CERT · DEGREE · EMPLOYER · YEARS_EXP<br/>· ModernBERT v11 → TOOL<br/>· GLiNER v3 10-type (fine tuned) → INDUSTRY · LOCATION · PROJECT · SOFT_SKILL<br/>· Gazetteer (TIER_1 / TIER_2) → high-precision deterministic overlay<br/>via per_class_router · conflict resolved by named rules"]:::model
+      SBERT["Sentence-BERT all-MiniLM-L6-v2<br/>384-dim embeddings<br/>cosine + Hungarian assignment"]:::model
+      GAP["Skill Gap Analyzer<br/>NER × SBERT diff<br/>matched · weak · missing<br/>+ years-of-experience delta<br/>+ seniority alignment<br/>+ coaching paths"]:::tool
       NER --> GAP
       SBERT --> GAP
     end
 
-    subgraph A2["Agent 2, Workforce Forecasting"]
+    subgraph A2["Agent 2 · Workforce Forecasting"]
       direction TB
-      LSTM[Bi LSTM with attention]:::model
-      UQ[MC Dropout + Split Conformal]:::model
-      ANALYZER[19 signal Workforce Analyzer]:::tool
-      OPT[Knapsack portfolio optimizer]:::tool
-      LSTM --> UQ
+      LSTM["Bi-LSTM with attention<br/>8 features · 2 layers · 128 hidden<br/>12-month lookback<br/>dual heads: attrition logit + headcount Δ"]:::model
+      MCD["MC-Dropout<br/>Bayesian credible interval<br/>30 samples · 90% CI<br/>Gal and Ghahramani 2016"]:::model
+      CONF["Split Conformal · α = 0.10<br/>distribution-free guaranteed coverage<br/>Angelopoulos and Bates 2021"]:::model
+      ANALYZER["Workforce Risk Analyzer · 19 signals<br/>· gradient driver attribution<br/>· retirement / new-hire / comp-gap cohorts<br/>· intervention simulator with causal status<br/>(causal · mixed · correlational · cost-only)<br/>· replacement cost · trajectory · executive briefing"]:::tool
+      OPT["Knapsack portfolio optimizer<br/>dept × intervention × magnitude<br/>(144 candidates) ranked by ROI"]:::tool
+      LSTM --> MCD
+      LSTM --> CONF
       LSTM --> ANALYZER
       ANALYZER --> OPT
     end
 
-    A1 --> BRAIN[Proprietary Brain<br/>20 cell decision matrix + multi brain consensus + counterfactual flip explainer]:::brain
-    A2 --> BRAIN
-    BRAIN --> MEMO[Hire / Retention / Backfill memo<br/>with execution trace + named rule]:::output
-    BRAIN -. optional path when LLM key set .-> CREW[CrewAI + LLM]:::optional
-    CREW --> MEMO
-    BRAIN -. logs to .-> F
+    PII --> NER
+    PII --> SBERT
+    H --> LSTM
+    IND -. profile constants .-> ANALYZER
+    IND -. profile constants .-> OPT
 
-    classDef input fill:#EBF5FF,stroke:#0071E3,color:#0F172A
-    classDef model fill:#FFF8EC,stroke:#FF9500,color:#0F172A
-    classDef tool fill:#E8FAF0,stroke:#34C759,color:#0F172A
-    classDef brain fill:#F5EEFA,stroke:#AF52DE,color:#0F172A
-    classDef output fill:#FFFFFF,stroke:#1D1D1F,color:#0F172A
-    classDef mem fill:#EBF8FF,stroke:#5AC8FA,color:#0F172A
+    TOOLS{{"21 @tool functions · JSON in / JSON out<br/>Agent 1: 6 talent_tools · Agent 2: 17 forecast_tools<br/>shared by both orchestrators below"}}:::tool
+    GAP --> TOOLS
+    OPT --> TOOLS
+    ANALYZER --> TOOLS
+    MCD --> TOOLS
+    CONF --> TOOLS
+
+    subgraph BRAIN["Proprietary Brain · brain.py (default · LLM free · ~500 ms)"]
+      direction TB
+      WF["6 workflows<br/>joint_hire · workforce_risk_scan<br/>quarterly_retention_plan · rank_candidates_for_req<br/>match_candidate_across_reqs · multi_brain_consensus"]:::brain
+      MULTI["Multi-brain consensus (frontier safety)<br/>· Sophisticated 20-cell matrix R1 - R20<br/>· Conservative 20-cell matrix R1c - R20c<br/>· Heuristic baseline H0 - H5 (2-signal)<br/>strong / majority / no consensus → escalation routing"]:::brain
+      CFA["Counterfactual flip explainer<br/>Section D · DEFER / DECLINE only<br/>candidate-side gap closures<br/>+ team-side retention levers<br/>graded high / medium / low feasibility"]:::brain
+      BLEND["Confidence blender<br/>talent · workforce · MC-Dropout<br/>· Split Conformal · trajectory<br/>weakest-link cap"]:::brain
+      WF --> MULTI
+      WF --> CFA
+      WF --> BLEND
+    end
+
+    CREW["CrewAI + LLM Brain · agents.py (optional · ~15-30 s · activated when LLM key is set)<br/>Claude Sonnet 4 / GPT-4o-mini / Gemini 2.0 Flash<br/>Sequential Process · CrewAI Memory (HF MiniLM-L6-v2 embedder)<br/>Talent Intelligence Agent (6 tools) → Workforce Forecasting Agent (17 tools)"]:::optional
+
+    TOOLS --> BRAIN
+    TOOLS -. activated when LLM API key is set .-> CREW
+
+    subgraph HIL["Human-in-the-Lead continual learning · feedback.py"]
+      direction TB
+      FS[("FeedbackStore<br/>JSONL append-only<br/>verdict corrections · confidence calibrations<br/>causal updates · new interventions")]:::mem
+      LE["LearningEngine<br/>compute_adjustments()<br/>rule overrides · confidence multipliers<br/>causal status updates · review priority"]:::brain
+      HIST[("MemoHistoryStore<br/>cross-session memo log")]:::mem
+      FS --> LE
+    end
+
+    LE -. adaptive mode only .-> BRAIN
+    BRAIN -. captures operator events .-> FS
+    BRAIN -. logs every memo .-> HIST
+
+    MEMO["Boardroom memo · markdown + structured JSON<br/>A · Hire Decision (verdict + named rule + dual UQ CIs)<br/>B · Retention Plan (with causal-status icons and ROI)<br/>C · Backfill Pipeline (internal bench + external channels)<br/>D · Counterfactual Flip (DEFER / DECLINE only)<br/>+ execution trace · confidence · learning metadata"]:::output
+    DASH["Streamlit boardroom dashboard<br/>localhost:8501<br/>review queue · feedback submission<br/>threshold sensitivity · multi-brain panel"]:::output
+
+    BRAIN --> MEMO
+    CREW --> MEMO
+    MEMO --> DASH
+
+    classDef input    fill:#EBF5FF,stroke:#0071E3,color:#0F172A
+    classDef config   fill:#FFFAEB,stroke:#B45309,color:#0F172A
+    classDef guard    fill:#FFF1F2,stroke:#E11D48,color:#0F172A
+    classDef model    fill:#FFF8EC,stroke:#FF9500,color:#0F172A
+    classDef tool     fill:#E8FAF0,stroke:#34C759,color:#0F172A
+    classDef brain    fill:#F5EEFA,stroke:#AF52DE,color:#0F172A
     classDef optional fill:#F5F5F7,stroke:#86868B,color:#1D1D1F,stroke-dasharray:5 5
+    classDef mem      fill:#EBF8FF,stroke:#5AC8FA,color:#0F172A
+    classDef output   fill:#FFFFFF,stroke:#1D1D1F,color:#0F172A
 ```
 
 ## Deep learning models
