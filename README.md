@@ -4,6 +4,8 @@
 
 Solo Project, Jiri Musil. ITAI 2376 Deep Learning, Spring 2026. Houston City College, Professor Patricia McManus.
 
+![Workforce Intelligence System dashboard, Overview page](main.png)
+
 ## What this agent does
 
 The system reads resumes and job descriptions, reads twelve months of HRIS time series for a department, and produces one boardroom ready memo that combines a hire decision, a retention plan for the receiving team, and a backfill pipeline for the role. The memo cites specific numbers from verified deep learning model outputs, names the policy rule the verdict came from, and ships with a full execution trace so every recommendation traces back to a tool call.
@@ -99,6 +101,7 @@ The four NER models cooperate through a per class router. Each class is owned by
 ```
 .
 ├── README.md                this file
+├── main.png                 dashboard Overview screenshot embedded above
 ├── REFLECTION.md            5 section reflection per the assignment rubric
 ├── requirements.txt         Python 3.11 dependencies
 ├── Dockerfile               container build for the agent
@@ -242,10 +245,6 @@ python main.py --mode agent --scenario retention
 ```
 
 Returns a budget bounded portfolio across 8 departments x 6 interventions x 3 magnitudes, ranks 144 candidate actions by ROI in percentage points reduction per dollar million, fills the budget with the top set under a constraint that no department gets the same intervention twice. Output reads as a board ready table with per department rollup and total reduction in attrition probability.
-
-## Demo
-
-The recorded demo lives at [demo/demo.mp4](demo/demo.mp4) and is also linked from the project landing page. Three scenarios are walked through in 4 minutes.
 
 ## Known limitations
 
