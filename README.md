@@ -6,6 +6,12 @@ Solo Project, Jiri Musil. ITAI 2376 Deep Learning, Spring 2026. Houston City Col
 
 ![Workforce Intelligence System dashboard, Overview page](main.png)
 
+## Demo
+
+Recorded walkthrough of the system in action: [watch the demo on Houston Community College SharePoint](https://houcomcol-my.sharepoint.com/:v:/g/personal/w216916125_student_hccs_edu/IQDsmWpI6wxfRI08qaiF0UlfAf-CIYGMFu6TU6QBGnBAtgg?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=RDaKXI).
+
+The recording narrates the agent end to end: the routed NER ensemble extracting entities from a candidate resume, Sentence BERT producing the match score, the Bi LSTM with dual uncertainty intervals predicting attrition for the receiving department, the proprietary brain composing a joint hire / retention / backfill memo with a named decision rule and full execution trace, and the multi brain consensus and counterfactual flip explainer flows.
+
 ## What this agent does
 
 The system reads resumes and job descriptions, reads twelve months of HRIS time series for a department, and produces one boardroom ready memo that combines a hire decision, a retention plan for the receiving team, and a backfill pipeline for the role. The memo cites specific numbers from verified deep learning model outputs, names the policy rule the verdict came from, and ships with a full execution trace so every recommendation traces back to a tool call.
